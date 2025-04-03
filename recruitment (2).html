@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司招聘页面</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('file:///C:/Users/szss/Desktop/20250326124321174296420148987.png');
+            background-size: cover;
+            background-position: center;
+            font-size: 25px;
+            line-height: 2.5; /* 调整行间距 */
+        }
+
+        header {
+            background: linear-gradient(to right, #007BFF, #00c3ff); /* 科技感渐变背景 */
+            color: white;
+            text-align: center;
+            padding: 80px 0; /* 增加上下内边距 */
+        }
+
+        header h1 {
+            font-size: 60px; /* 调大版头字体 */
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 文字阴影增加科技感 */
+        }
+
+        header p {
+            font-size: 40px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out; /* 增加渐显过渡时间 */
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #007BFF;
+            font-size: 30px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007BFF; /* 增加标题下划线 */
+            padding-bottom: 5px;
+        }
+
+        .job {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        .job:last-child {
+            border-bottom: none;
+        }
+
+        .job h3 {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .job p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+                margin: 10px;
+            }
+        }
+
+        /* 邮件链接样式 */
+        .apply-email a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .apply-email a:hover {
+            text-decoration: underline;
+        }
+
+        /* 公司简介首行缩进 */
+        #company-intro p:first-of-type {
+            text-indent: 2em;
+        }
+
+        /* 科技公司照片样式 */
+        .company-photo {
+            max-width: 30%;
+            height: auto;
+            border-radius: 5px;
+            float: right;
+            margin-left: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 图片阴影增加科技感 */
+        }
+
+
+        /* 让段落与图片高度对齐 */
+        #company-intro p {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <h1>欢迎加入我们的团队</h1>
+        <p>一起创造更美好的未来</p>
+    </header>
+
+    <!-- 公司简介部分 -->
+    <section id="company-intro">
+        <h2>公司简介</h2>
+        <img class="company-photo" src="https://4kwallpapers.com/images/walls/thumbs_2t/13906.jpg"
+            alt="科技公司照片">
+        <p>  瑞途科技有限公司（RuiTu Technology）成立于 2012 年 4 月，总部位于北京中关村科技园区。作为国内领先的智能手机创新企业，我们始终专注于新一代智能终端研发与制造，累计服务全球超 5000 万用户。经过 13 年高速发展，公司现有员工 1200 余人，构建了涵盖研发中心、智能制造基地、全球营销中心、供应链管理部及用户体验研究院五大核心部门的完整产业体系。</p>
+    </section>
+
+    <!-- 招聘职位部分 -->
+    <section>
+        <h2>招聘职位</h2>
+        <div class="job">
+            <h3>软件工程师</h3>
+            <p><strong>职位描述：</strong>负责公司软件产品的开发、测试和维护工作，参与项目的需求分析和设计。</p>
+            <p><strong>任职要求：</strong>熟悉 Java 或 Python 编程语言，有良好的编程习惯和团队协作能力。</p>
+        </div>
+        <div class="job">
+            <h3>数据分析师</h3>
+            <p><strong>职位描述：</strong>收集、整理和分析业务数据，为公司决策提供数据支持，撰写数据分析报告。</p>
+            <p><strong>任职要求：</strong>熟练掌握 SQL 语言，具备数据分析工具（如 Excel、Python 数据分析库）的使用经验。</p>
+        </div>
+    </section>
+
+    <!-- 福利待遇部分 -->
+    <section>
+        <h2>我们为优秀人才提供：</h2>
+        <ul>
+            <li>行业竞争力薪酬 + 股权激励</li>
+            <li>双通道职业发展体系（管理/技术）</li>
+            <li>国际化项目历练机会</li>
+            <li>前沿技术研发实验室</li>
+            <li>完善的培训体系</li>
+        </ul>
+    </section>
+
+    <!-- 申请方式部分 -->
+    <section>
+        <h2>申请方式</h2>
+        <p class="RuiTu.SSC@163.com">请将您的简历发送至：<a href="mailto:RuiTu.SSC@163.com" title="点击发送邮件应聘">RuiTu.SSC@163.com</a></p>
+        <p>邮件主题请注明：应聘职位 - 姓名</p>
+    </section>
+
+    <!-- 页面底部 -->
+    <footer>
+        &copy; 2025 瑞途科技有限公司 版权所有
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>    
